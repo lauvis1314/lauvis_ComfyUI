@@ -9,19 +9,19 @@ services:
       service:
         name: serverless-devs-application
       function:
-        name: lauvis-ComfyUI-ec1j
+        name: lauvis-ComfyUI-uhu4
         description: Initialize
         runtime: custom
         environmentVariables:
           PATH: >-
-            /opt/python3.8/bin:/usr/local/bin/apache-maven/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/ruby/bin:/opt/bin:/code:/code/bin
+            /opt/python3.10/bin:/usr/local/bin/apache-maven/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/ruby/bin:/opt/bin:/code:/code/bin
           PYTHONPATH: /opt/python:/code
           LD_LIBRARY_PATH: >-
             /code:/code/lib:/usr/local/lib:/opt/lib:/opt/php8.1/lib:/opt/php8.0/lib:/opt/php7.2/lib
         layers:
-          - acs:fc:cn-hangzhou:official:layers/Python38/versions/2
+          - acs:fc:cn-hangzhou:official:layers/Python310/versions/2
           - >-
-            acs:fc:cn-hangzhou:official:layers/Python38-Package-Collection/versions/2
+            acs:fc:cn-hangzhou:official:layers/Python310-Package-Collection/versions/2
           - acs:fc:cn-hangzhou:official:layers/Python3-Flask2x/versions/2
         memorySize: 16384
         cpu: 8
